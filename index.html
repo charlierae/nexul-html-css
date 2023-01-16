@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Html</title>
 </head>
+
 <body>
-    <h1>Nexul Course is Awesome</h1>
-    <p style="color:blue;">Here are the reasons why</p>
-    <ul>
-        <li style="font-weight: bold;">reason 1</li>
-        <li>reason 2</li>
-        <li>reason 3</li>
-    </ul>
-    <ol>
-        <li>first assignment</li>
-        <li>second assignment</li>
-        <li>third assignment</li>
-    </ol>
+    <h1>Welcome to HTML 3</h1>
+    <div class="main">
+        <form>
+            <label>
+                First Name:
+                <input id="firstName" name="firstName" />
+            </label>
+            <label>
+                Last Name:
+                <input id="lastName" name="lastName" />
+            </label>
+            <button id="update">Save</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>
+            this is a footer
+        </p>
+    </div>
+    <script>
+        var teacher = {
+            firstName: 'Buck',
+            lastName: 'Martin',
+            languages: [
+                'C#',
+                'SQL'
+            ]
+        };
+
+        function displayTeacher(teacher) {
+            var firstNameElem = document.getElementById('firstName');
+            var lastNameElem = document.getElementById('lastName');
+
+            console.log(firstNameElem);
+
+            firstNameElem.value = teacher.firstName;
+            lastNameElem.value = teacher.lastName;
+        }
+
+        displayTeacher(teacher);
+    </script>
 </body>
+
 </html>
